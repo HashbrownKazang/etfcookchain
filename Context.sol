@@ -1,0 +1,43 @@
+/*
+```_____````````````_````_`````````````````_``````````````_````````````
+``/`____|``````````|`|``|`|```````````````|`|````````````|`|```````````
+`|`|`````___```___`|`|`_|`|__```___```___`|`|`__```````__|`|`_____```__
+`|`|````/`_`\`/`_`\|`|/`/`'_`\`/`_`\`/`_`\|`|/`/``````/`_``|/`_`\`\`/`/
+`|`|___|`(_)`|`(_)`|```<|`|_)`|`(_)`|`(_)`|```<```_``|`(_|`|``__/\`V`/`
+``\_____\___/`\___/|_|\_\_.__/`\___/`\___/|_|\_\`(_)``\__,_|\___|`\_/``
+```````````````````````````````````````````````````````````````````````
+```````````````````````````````````````````````````````````````````````
+*/
+
+// -> Cookbook is a free smart contract marketplace. Find, deploy and contribute audited smart contracts.
+// -> Follow Cookbook on Twitter: https://twitter.com/cookbook_dev
+// -> Join Cookbook on Discord:https://discord.gg/WzsfPcfHrk
+
+// -> Find this contract on Cookbook: https://www.cookbook.dev/contracts/ETF-DAO/?utm=code
+
+
+
+// SPDX-License-Identifier: MIT
+// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
+
+pragma solidity ^0.8.0;
+
+/**
+ * @dev Provides information about the current execution context, including the
+ * sender of the transaction and its data. While these are generally available
+ * via msg.sender and msg.data, they should not be accessed in such a direct
+ * manner, since when dealing with meta-transactions the account sending and
+ * paying for execution may not be the actual sender (as far as an application
+ * is concerned).
+ *
+ * This contract is only required for intermediate, library-like contracts.
+ */
+abstract contract Context {
+    function _msgSender() internal view virtual returns (address) {
+        return msg.sender;
+    }
+
+    function _msgData() internal view virtual returns (bytes calldata) {
+        return msg.data;
+    }
+}
